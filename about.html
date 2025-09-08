@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Madhuban NGO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== Header / Navbar ===== -->
+    <header class="header">
+        <nav class="navbar container">
+          <div><a href="index.html" class="logo"> <img src="madhuban_logo(1).png" alt="Madhuban Logo">Madhuban</a></div> 
+            <button class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="involved.html">Get Involved</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== About Section ===== -->
+    <section class="about-section">
+        <div class="container about-content">
+            <h2>About Madhuban</h2>
+            <p>
+                <strong>Founder President:</strong> Mr. Madhuri Gaikwad<br><br>
+                <strong>Madhuban Mentally and Physically Handicapped Social Organization, Pune</strong> works for the education and rehabilitation of mentally and physically disabled children and adults. 
+                The organization provides services to all types of disabled individuals from infancy to adulthood, including those with blindness, deafness, cerebral palsy, and multiple disabilities. 
+                Madhuban is a registered trust committed to providing services for the welfare of disabled people, keeping in mind social stigma and the special needs of this community.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="footer-grid container">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="involved.html">Get Involved</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect with Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Madhuban. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- ===== JS for Mobile Menu ===== -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+    <!-- FontAwesome CDN for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
