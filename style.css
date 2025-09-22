@@ -485,3 +485,36 @@ section {
         justify-content: center;
     }
 }
+
+/* Add this at the end of your style.css file */
+
+.video-links {
+    text-align: center;
+}
+
+.video-links ul {
+    list-style: none; /* Removes the default bullet points */
+    padding: 0;
+    margin-top: 20px;
+    display: inline-block; /* Allows the container to center properly */
+    text-align: left; /* Aligns the text to the left within the centered block */
+}
+
+.video-links li {
+    margin-bottom: 15px; /* Adds space between each video link */
+    font-size: 1.1em;
+}
+
+.video-links li a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between the icon and the text */
+}
+
+/* Adds a YouTube icon before each link */
+.video-links li a::before {
+    content: '\f167'; /* Font Awesome YouTube icon unicode */
+    font-family: 'Font Awesome 6 Brands';
+    color: #FF0000; /* YouTube red */
+    font-size: 1.2em;
+}
