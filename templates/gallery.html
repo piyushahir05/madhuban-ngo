@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Gallery - Madhuban{% endblock %}
+
+{% block content %}
+<main>
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Gallery & Videos</h2>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                {% set images = [
+                    'img-5.png', 'WhatsApp Image 2025-09-22 at 08.08.46.jpeg',
+                    'WhatsApp Image 2025-09-22 at 08.08.50.jpeg', 'WhatsApp Image 2025-09-22 at 08.08.58.jpeg',
+                    'WhatsApp Image 2025-09-22 at 08.09.39.jpeg', 'WhatsApp Image 2025-09-22 at 08.09.52.jpeg',
+                    'WhatsApp Image 2025-09-22 at 08.09.53.jpeg', 'WhatsApp Image 2025-09-22 at 08.09.54.jpeg',
+                    'WhatsApp Image 2025-09-22 at 08.09.56.jpeg', 'WhatsApp Image 2025-09-22 at 08.09.57 (1).jpeg',
+                    'WhatsApp Image 2025-09-22 at 08.09.57.jpeg',
+                    'IMG-20250818-WA0013.jpg', 'IMG-20250818-WA0051.jpg',
+                    'IMG-20250818-WA0045.jpg', 'IMG-20250818-WA0009.jpg',
+                    'IMG-20250818-WA0044.jpg', 'IMG-20250818-WA0029.jpg',
+                    'IMG-20250818-WA0012.jpg', 'IMG-20250818-WA0046.jpg',
+                    'IMG-20250818-WA0026.jpg', 'IMG-20250818-WA0088.jpg',
+                    'IMG-20250818-WA0091.jpg', 'IMG-20250818-WA0100.jpg',
+                    'IMG-20250818-WA0080.jpg', 'IMG-20250818-WA0099.jpg',
+                    'IMG-20250818-WA0076.jpg', 'IMG-20250818-WA0075.jpg',
+                    'IMG-20250818-WA0056.jpg'] %}
+                {% for img in images %}
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/' ~ img) }}" alt="Madhuban image">
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Video Links -->
+            <div class="video-links">
+                <h3>Watch our work on YouTube:</h3>
+                <ul>
+                    <li>
+                        <a href="https://youtu.be/xvOslK88j6o?si=q8-1kpGLz7ldp13M" target="_blank">
+                            <i class="fab fa-youtube" style="color:#FF0000; margin-right:8px;"></i>
+                            Sangeet Khurchi in Madhuban NGO 2021/During Ganpati Bappa in NGO.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/18yI90jXFB4?si=d8nVQewMRnQ22LiT" target="_blank">
+                            <i class="fab fa-youtube" style="color:#FF0000; margin-right:8px;"></i>
+                            Madhuban NGO celebrated world disability day..
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/f5GngTVkpS4?si=Cg8OxYnTPP3-bGvw" target="_blank">
+                            <i class="fab fa-youtube" style="color:#FF0000; margin-right:8px;"></i>
+                            Rakshabandhan is Celebrated in Madhuban Sanstha(NGO).
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/Jzph-vpzHRU?si=k-O2USejpGSykvh-" target="_blank">
+                            <i class="fab fa-youtube" style="color:#FF0000; margin-right:8px;"></i>
+                            15 August/Independence Day had celebrated in Madhuban Sanstha.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/watch?v=te5dykBPdMo&t=245&feature=shared" target="_blank">
+                            <i class="fab fa-youtube" style="color:#FF0000; margin-right:8px;"></i>
+                            Madhuban M.R and C.P Sanstha Dhankwadi , Pune - 411043
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/n-otaazAlHw?si=NR2_iFZ8U_sT4n9q" target="_blank">
+                            <i class="fab fa-youtube" style="color:#FF0000; margin-right:8px;"></i>
+                            3 July 2023
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/-nz2ShD1V2Q?si=4hep-p8e2CzRnu6x" target="_blank">
+                            <i class="fab fa-youtube" style="color:#FF0000; margin-right:8px;"></i>
+                            Rakhi preparation for Rakshabandhan by Madhuban M.R And C.P Childrens and by Teachers.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/v1cYHEZ4Z2o?si=TcdB0rmiGb8p1H8X" target="_blank">
+                            <i class="fab fa-youtube" style="color:#FF0000; margin-right:8px;"></i>
+                            Rakshabandhan is Celebrated in Madhuban Sanstha ( NGO ) 2023
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+</main>
+{% endblock %}

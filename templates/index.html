@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Madhuban{% endblock %}
+
+{% block content %}
+<div class="hero-intro-container">
+    {% include 'sections/hero.html' %}
+    {% include 'sections/hero_image.html' %}
+</div>
+{% include 'sections/intro.html' %}
+ {% include 'sections/contribute.html' %}
+{% endblock %}

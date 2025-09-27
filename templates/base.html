@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Madhuban{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/madhuban_logo (2).png') }}">
+</head>
+
+<body>
+
+    <!-- ===== Header / Navbar ===== -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="{{ url_for('index') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/madhuban_logo (2) (1).png') }}" alt="Madhuban Logo">
+                <span class="logo-text">Madhuban</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('index') }}" class="{% if active_page=='home' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="{% if active_page=='about' %}active{% endif %}">About</a></li>
+                <li><a href="{{ url_for('programs') }}" class="{% if active_page=='programs' %}active{% endif %}">Programs</a></li>
+                <li><a href="{{ url_for('get_involved') }}" class="{% if active_page=='involved' %}active{% endif %}">Get Involved</a></li>
+                <li><a href="{{ url_for('donate') }}" class="{% if active_page=='donate' %}active{% endif %}">Donate</a></li>
+                <li><a href="{{ url_for('gallery') }}" class="{% if active_page=='gallery' %}active{% endif %}">Gallery</a></li>
+                <li><a href="{{ url_for('contact') }}" class="{% if active_page=='contact' %}active{% endif %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Page Content ===== -->
+    {% block content %}{% endblock %}
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('programs') }}">Programs</a></li>
+                    <li><a href="{{ url_for('get_involved') }}">Get Involved</a></li>
+                    <li><a href="{{ url_for('donate') }}">Donate</a></li>
+                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Madhuban Mentally and Physically Handicapped Social Organization. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- ===== JS for Mobile Menu ===== -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

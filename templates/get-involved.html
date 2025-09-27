@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Get Involved - Madhuban{% endblock %}
+
+{% block content %}
+<section class="get-involved-section">
+    <div class="container">
+        <h2>Get Involved with Madhuban</h2>
+        <p class="section-subtitle">Join us in making a difference for children and adults with disabilities.</p>
+
+        <div class="involved-grid">
+            <div class="involved-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Volunteer</h3>
+                <p>Contribute your time and skills to help our programs and events.</p>
+                <a href="{{ url_for('contact') }}" class="btn">Join Now</a>
+            </div>
+            <div class="involved-card">
+                <i class="fas fa-donate"></i>
+                <h3>Donate</h3>
+                <p>Support our cause financially to help us reach more people.</p>
+                <a href="{{ url_for('donate') }}" class="btn">Donate</a>
+            </div>
+            <div class="involved-card">
+                <i class="fas fa-users"></i>
+                <h3>Partner with Us</h3>
+                <p>Collaborate with Madhuban to organize programs and events.</p>
+                <a href="{{ url_for('contact') }}" class="btn">Collaborate</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
