@@ -332,25 +332,29 @@ section {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #003049;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-    .nav-menu.active {
-        max-height: 500px;
-    }
-    .nav-menu li {
-        width: 100%;
-        text-align: center;
-        padding: 15px 0;
-    }
+   /* Mobile menu hidden by default */
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #003049;
+    text-align: center;
+    z-index: 100;
+}
+
+/* Show menu when active */
+.nav-menu.active {
+    display: flex;
+}
+
+/* Menu items styling */
+.nav-menu li {
+    width: 100%;
+    padding: 15px 0;
+}
     .menu-toggle {
         display: flex;
     }
