@@ -778,3 +778,36 @@ section {
     color: #1a5276;
     text-decoration: underline;
 }
+
+/* Mobile menu hidden by default */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* distance from top */
+        left: 50%; /* start at center */
+        transform: translateX(-50%); /* shift left by 50% of width to center */
+        width: 200px; /* dropdown width */
+        background-color: #003049;
+        text-align: left; /* links aligned to left inside box */
+        padding: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        padding: 10px 15px;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+

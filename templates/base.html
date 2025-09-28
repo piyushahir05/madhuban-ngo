@@ -19,11 +19,15 @@
                 <img src="{{ url_for('static', filename='images/madhuban_logo (2) (1).png') }}" alt="Madhuban Logo">
                 <span class="logo-text">Madhuban</span>
             </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
+
+            <!-- Mobile Hamburger Button -->
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
+
+            <!-- Navbar Links -->
             <ul class="nav-menu">
                 <li><a href="{{ url_for('index') }}" class="{% if active_page=='home' %}active{% endif %}">Home</a></li>
                 <li><a href="{{ url_for('about') }}" class="{% if active_page=='about' %}active{% endif %}">About</a></li>
@@ -62,13 +66,19 @@
 
     <!-- ===== JS for Mobile Menu ===== -->
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+
+                // Toggle aria-expanded for accessibility
+                const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !expanded);
+            });
         });
     </script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>
