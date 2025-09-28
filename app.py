@@ -1,6 +1,7 @@
 from flask import Flask, render_template
+import os  # <-- needed to get the Railway PORT
 
-app = Flask(__name__, template_folder='templates')  # Set template_folder to your 'navbar' folder
+app = Flask(__name__, template_folder='templates')  # Make sure this points to your templates folder
 
 @app.route('/')
 def index():
@@ -31,4 +32,5 @@ def contact():
     return render_template('contact.html', active_page='contact')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))  # Use Railway port or default 5000
+    app.run(host='0.0.0.0', port=port, debug=True)
